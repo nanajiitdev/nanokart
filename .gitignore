@@ -1,0 +1,47 @@
+# Maven
+target/
+*.class
+
+# Spring Boot logs
+*.log
+
+# IDE - Eclipse
+.metadata/
+.settings/
+.classpath
+.project
+
+# IntelliJ
+.idea/
+*.iml
+
+# VS Code
+.vscode/
+
+# Node / React
+node_modules/
+dist/
+
+# Environment files
+.env
+.env.*
+application-local.properties
+application-local.yml
+
+# Logs
+logs/
+
+# Temporary files
+*.tmp
+*.temp
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Eclipse
+.factorypath
+.metadata/
+.settings/
+.classpath
+.project

@@ -45,3 +45,8 @@ Thumbs.db
 .settings/
 .classpath
 .project
+
+# Backup files
+*.backup
+*.bachup
+*,backup

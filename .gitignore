@@ -50,3 +50,5 @@ Thumbs.db
 *.backup
 *.bachup
 *,backup
+# Database backups
+db/

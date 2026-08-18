@@ -60,7 +60,7 @@ public class AuthController {
                 .orElseThrow(() ->
                         new RuntimeException("User not found"));
 
-        String token = JwtUtil.generateToken(user.getEmail());
+        String token = JwtUtil.generateToken(user.getEmail(),user.getId());
 
         return new LoginResponse(
 

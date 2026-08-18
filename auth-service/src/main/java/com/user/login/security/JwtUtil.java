@@ -15,9 +15,10 @@ public class JwtUtil {
     private static final Key KEY =
             Keys.hmacShaKeyFor(SECRET.getBytes());
 
-    public static String generateToken(String email) {
+    public static String generateToken(String email, Long userId) {
           return Jwts.builder()
                 .subject(email)
+                .claim("userId", userId)
                 .issuedAt(new Date())
                 .expiration(
                         new Date(System.currentTimeMillis() + 1000 * 60 * 60)
@@ -52,6 +53,16 @@ public class JwtUtil {
             return false;
         }
 
+    }
+    
+    public static Long extractUserId(String token) {
+
+        return Jwts.parser()
+                .verifyWith((javax.crypto.SecretKey) KEY)
+                .build()
+                .parseSignedClaims(token)
+                .getPayload()
+                .get("userId", Long.class);
     }
 
 }

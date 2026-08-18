@@ -69,7 +69,7 @@ public class OAuth2LoginSuccessHandler
 
         // Generate your existing NanoKart JWT
         String token =
-                JwtUtil.generateToken(user.getEmail());
+                JwtUtil.generateToken(user.getEmail(), user.getId());
 
         System.out.println("NanoKart JWT generated successfully");
 
